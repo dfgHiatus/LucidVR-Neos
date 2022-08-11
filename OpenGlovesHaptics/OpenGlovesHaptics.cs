@@ -48,8 +48,8 @@ namespace OpenGlovesHaptics
         {
             static void Postfix(HandPoser __instance)
             {
-                bool useIsGrabbing = config.GetValue(useIsGrabbing);
-                bool useRayCasts = config.GetValue(useRayCasts);
+                bool useIsGrabbing = config.GetValue(OpenGlovesHaptics.useIsGrabbing);
+                bool useRayCasts = config.GetValue(OpenGlovesHaptics.useRayCasts);
                 if (__instance.LocalUser == __instance.Slot.ActiveUser && (useIsGrabbing || useRayCasts))
                 {
                     ForceFeedbackLink feedbackLink = __instance.Side.Value == Chirality.Left ? feedbackLinkLeft : feedbackLinkRight;
