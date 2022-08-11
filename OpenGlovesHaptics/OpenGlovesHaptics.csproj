@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="0Harmony">
-      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\NeosVR\0Harmony.dll</HintPath>
+      <HintPath>C:\Users\user\Source\Repos\LucidVR-Neos\packages\Lib.Harmony.2.1.1\lib\net45\0Harmony.dll</HintPath>
     </Reference>
     <Reference Include="BaseX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -54,10 +54,7 @@
     <Reference Include="System.Numerics" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EyeDevice.cs" />
     <Compile Include="EyeFaceAPI.cs" />
-    <Compile Include="HandDevice.cs" />
-    <Compile Include="MouthDevice.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
