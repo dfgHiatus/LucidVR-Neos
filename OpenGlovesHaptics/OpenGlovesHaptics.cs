@@ -56,12 +56,14 @@ namespace OpenGlovesHaptics
 
                     if (useIsGrabbing)
                     {
-                        if (HandPoserToGrabber[__instance] == null)
+                        if (!HandPoserToGrabber.ContainsKey(__instance))
                         {
-                            HandPoserToGrabber[__instance] = __instance.Slot.FindCommonTool().Grabber;
+                            if(__instance.Slot.FindCommonTool()?.Grabber != null)
+                                HandPoserToGrabber[__instance] = __instance.Slot.FindCommonTool()?.Grabber;
                         }
-                        if (HandPoserToGrabber[__instance].IsHoldingObjects)
+                        else if (HandPoserToGrabber[__instance].IsHoldingObjects)
                         {
+                            Msg("constriting");
                             feedbackLink.Constrict();
                             return;
                         }
